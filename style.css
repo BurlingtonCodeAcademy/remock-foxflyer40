@@ -80,7 +80,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to top, green, 55%, chartreuse)
+    background: linear-gradient(to top, green, 55%, chartreuse);
 }
 
 #quote {
@@ -110,6 +110,11 @@ body {
     /* justify-content: center; */
 }
 
+.smPost {
+    max-height: 40em;
+    overflow: hidden;
+}
+
 .smpTitle {
     margin: 1em 0 1em 0
 }
@@ -130,7 +135,7 @@ body {
 }
 
 .blTitle {
-Margin: .4em 0 .4em 0
+    Margin: .4em 0 .4em 0
 }
 
 .mainHome .infoLink {
@@ -180,7 +185,7 @@ Margin: .4em 0 .4em 0
     grid-template-rows: 1fr 1fr;
     column-gap: 1rem;
     row-gap: .5em;
-    background-color:blanchedalmond;
+    background-color: blanchedalmond;
 }
 
 .blogPost .blogLink {
@@ -201,7 +206,7 @@ Margin: .4em 0 .4em 0
     grid-area: 1 / 2 / 3 / 3;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 /* LEARN MORE  LEARN MORE  LEARN MORE  LEARN MORE  LEARN MORE  LEARN MORE   */
@@ -214,35 +219,81 @@ Margin: .4em 0 .4em 0
     background-color: chocolate;
 }
 
-/* Footer Styles ***************************************/
+/* FOOTER  FOOTER  FOOTER  FOOTER  FOOTER  FOOTER  FOOTER  FOOTER  ***/
 
 .section.footer {
     grid-column: 1 / 6;
-    background-color: cornflowerblue;
+    background-color: rgb(182, 161, 131);
+    padding-bottom: 3rem;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 20% 1fr 1fr 20%;
+    grid-template-rows: 2r 2fr 4fr;
 }
 
 #footHeader {
-    border: .1rem solid black;
     grid-area: 1 / 2 / 2 / 4;
+    text-align: center;
+    margin: 2em 0 .5em 0;
+    font-size: 1.5em
 }
 
 #footForm {
-    border: .1rem solid black;
-    border: .1rem solid black;
-    grid-area: 2 / 2 / 5 / 3;
+    grid-area: 2 / 2 / 4 / 3;
+    margin-right: 1em;
 }
 
+#name {
+    width: 47%;
+    padding: .2em;
+    margin-bottom: .7em;
+}
+
+#email {
+    width: 47%;
+    padding: .2em;
+    margin: 0 0 .7em 0;
+    float: right;
+}
+
+#message {
+    padding: .2em;
+    margin-bottom: .7em;
+}
+
+#sendEmail {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 0 .5em .7em .5em;
+    line-height: 100%;
+}
+
+
 #footInfo {
-    border: .1rem solid black;
     grid-area: 2 / 3 / 3 / 4;
 }
 
 #footLinks {
-    border: .1rem solid black;
-    grid-area: 3 / 3 / 5 / 4;
+    grid-area: 3 / 3 / 4 / 4;
+    display: grid;
+    grid-template-columns: 25px 2fr 25px 2fr;
+}
+
+.icons {
+    width: 20px;
+    padding-top: .2em;
+}
+
+.flInfoCol-1 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+}
+
+p {
+    margin: 0
+}
+
+.flInfoText {
+    margin: 0 0 0 1em;
+    font-size: .8em;
 }
