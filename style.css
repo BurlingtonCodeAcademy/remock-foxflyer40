@@ -1,6 +1,5 @@
 /* Global styles*************** */
 
-
 body {
     margin: 0;
     padding: 0;
@@ -17,15 +16,10 @@ body {
     background-size: cover;
     font-family: 'Coiny', cursive;
     color: #573427;
-    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: .1fr .1fr .1fr 4fr .1fr;
-    grid-gap: 1em; */
 }
 
 .section {
     grid-column: 2 / 5;
-    display: flex;
-    flex-direction: column;
 }
 
 .singleDivider {
@@ -35,7 +29,7 @@ body {
 
 .doubleDivider {
     border-bottom: .4em double #492B2D;
-    margin: 2em 0 1em 0
+    margin: 2em 0 2em 0
 }
 
 /* Header styles************************ */
@@ -43,17 +37,22 @@ body {
 .header {
     text-align: center;
     align-items: center;
-    color: #D76735;
-    font-weight: bolder;
+    /* font-weight: bold; */
     border-bottom: double .2em #492B2D
 }
 
+a {
+    text-decoration: none;
+}
+
 .hLine1 {
+    color: #D76735;
     margin: .4em 0 0 0;
     font-size: 4em;
 }
 
 .hLine2 {
+    color: #D76735;
     margin: 0 0 1em 0;
     font-size: 2em;
 }
@@ -68,9 +67,14 @@ body {
 
 /* Features styles ********* */
 
+.section.features {
+    display: flex;
+    flex-direction: column;
+}
+
 #fTitle {
     display: flex;
-    align-self: center;
+    justify-content: center;
     margin: 1em;
     color: #4b9081;
     font-weight: bolder;
@@ -90,18 +94,20 @@ figure {
 
 figCaption {
     text-align: center;
+    color: #4b9081;
 }
 
-#learnMore {
-    font-family: 'Coiny', cursive;
+#btnTellMeMore {
     align-self: center;
+    font-family: 'Coiny', cursive;
+    width: 150px;
     margin: 1em;
-    background-color: #d76735;
+    background-color: #4b9081;
     border-radius: 1em;
 }
 
-#learnMore:hover {
-    background-color: #cc9278;
+#btnTellMeMore:hover {
+    background-color: #66beab;
     cursor: grab;
 }
 
@@ -112,14 +118,15 @@ figCaption {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to top, #fbd266, 55%,#d76735);
+    background: linear-gradient(to top, #fbd266, 55%, #d76735);
 }
 
 #quote {
     margin: 2em 0 2em 0;
     border-left: double;
     border-right: double;
-    border-radius: 5%;
+    border-radius: 2%;
+    border-width: .3em;
     padding: 0 2em 0 2em;
 }
 
@@ -132,7 +139,8 @@ figCaption {
     text-align: right;
 }
 
-/* Main section Home page */
+/* Main section Home page ******************************/
+
 .section.mainHome {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -141,6 +149,7 @@ figCaption {
     row-gap: .5em;
 }
 
+/* small post section********************************* */
 .mainHome .post {
     grid-area: 1 / 1 / 3 / 2;
     display: flex;
@@ -148,20 +157,13 @@ figCaption {
     /* justify-content: center; */
 }
 
-/* .smPost {
-    max-height: 40em;
-    overflow: hidden;
-} */
-
 .smpTitle {
     font-size: 1.5em;
     margin: 1em 0 .1em 0
 }
 
 .smpPic {
-  
-    width: 200px;
-    float: left;
+    width: 100%;
     padding: 0 .4em .2em 0;
 }
 
@@ -169,11 +171,33 @@ figCaption {
     margin: 0 0 1em 0
 }
 
+.btnContReading {
+    font-family: 'Coiny', cursive;
+    align-self: center;
+    margin: 1em;
+    background-color: rgb(251, 144, 102);
+    border-radius: 1em;
+}
+
+.btnContReading:hover {
+    background-color: rgb(250, 186, 160);
+    cursor: grab;
+}
+
+/* Blog link section************************************ */
+
 .mainHome .blogLink {
-    grid-area: 1 / 2 / 2 / 3;
+    /* grid-area: 1 / 2 / 2 / 3; */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+}
+
+.blDate {
+    border: .1em solid black;
+    width: fit-content;
+    padding: 0 1em 0 1em;
+    background-color: lightsalmon;
 }
 
 .blTitle {
@@ -181,15 +205,26 @@ figCaption {
     margin: .4em 0 .4em 0
 }
 
+.blTitle:hover {
+    color: rgb(251, 144, 102);
+}
+
 .blText {
     font-size: .9em;
 }
 
+/* Info Link section********************************* */
+
 .infoLink {
-    grid-area: 2 / 2 / 3 / 3;
+    /* grid-area: 2 / 2 / 3 / 3; */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+}
+
+.ilTitle {
+    font-size: 1.1em;
+    margin: 1em 0 .1em 0
 }
 
 .ilPic {
@@ -197,12 +232,30 @@ figCaption {
     margin: 0 .6em .1em 0;
 }
 
+.btnLearnMore {
+    font-family: 'Coiny', cursive;
+    align-self: center;
+    margin: 1em;
+    background-color:#5e97d8;
+    border-radius: 1em;
+}
+
+.btnLearnMore:hover {
+    background-color: #92b4db;;
+}
+
 /* CONTINUE READING  CONTINUE READING  CONTINUE READING  CONTINUE READING  CONTINUE READING  CONTINUE READING  */
+
+.container.contReading {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: .1fr .1fr .1fr 4fr .1fr;
+    grid-gap: 1em;
+}
 
 .section.contReading {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
     column-gap: 1rem;
     row-gap: .5em;
 }
@@ -290,7 +343,6 @@ figCaption {
 
 .section.footer {
     grid-column: 1 / 6;
-    
     background-color: #fa9262;
     padding-bottom: 3rem;
     display: grid;
@@ -306,7 +358,7 @@ figCaption {
 }
 
 #ftHeaderNorm {
-    color:  #a54314;
+    color: #a54314;
 }
 
 #ftHeaderBold {
@@ -350,13 +402,17 @@ figCaption {
 #footInfo {
     grid-area: 2 / 3 / 3 / 4;
     width: 98%;
-    padding-bottom: 1em;
+    padding-bottom: .1em;
 }
 
 #footLinks {
     grid-area: 3 / 3 / 4 / 4;
     display: grid;
     grid-template-columns: 25px 2fr 25px 2fr;
+}
+
+.footSpacer {
+    font-size: .1em;
 }
 
 .icons {
