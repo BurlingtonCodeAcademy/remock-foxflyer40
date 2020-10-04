@@ -1,28 +1,31 @@
 /* Global styles*************** */
 
+
 body {
-      display: flex;
-    justify-content: center;
-    background-image: url('./1images/Retro-Color-Palette-Background.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-    display: grid;
     width: 100vw;
-    height: 100vh;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 4fr 1fr 5fr 3fr;
-    grid-gap: 1em
+    overflow: hidden;
+    position: relative;
+    display: grid;
+    background-image: url('./1images/Retro-Color-Palette-Background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Coiny', cursive;
+    color: #573427;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: .1fr .1fr .1fr 4fr .1fr;
+    grid-gap: 1em; */
 }
 
 .section {
     grid-column: 2 / 5;
     display: flex;
     flex-direction: column;
-    
 }
 
 .singleDivider {
@@ -57,11 +60,13 @@ body {
 
 /* HOME PAGE   HOME PAGE   HOME PAGE   HOME PAGE   HOME PAGE   HOME PAGE  */
 
-/* Features styles **************************** */
-
-.features {
-    grid-column: 2 / 5;
+.container.home {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: .1fr .1fr .1fr 4fr .1fr;
+    grid-gap: 1em;
 }
+
+/* Features styles ********* */
 
 #fTitle {
     display: flex;
@@ -70,7 +75,11 @@ body {
     color: #4b9081;
     font-weight: bolder;
     font-size: 2em;
+}
 
+figure {
+    padding: .1;
+    margin: 0;
 }
 
 .pix {
@@ -79,9 +88,21 @@ body {
     justify-content: space-between;
 }
 
+figCaption {
+    text-align: center;
+}
+
 #learnMore {
+    font-family: 'Coiny', cursive;
     align-self: center;
-    margin: 1em
+    margin: 1em;
+    background-color: #d76735;
+    border-radius: 1em;
+}
+
+#learnMore:hover {
+    background-color: #cc9278;
+    cursor: grab;
 }
 
 /* Quote Space Styles*************************** */
@@ -91,7 +112,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to top, green, 55%, chartreuse);
+    background: linear-gradient(to top, #fbd266, 55%,#d76735);
 }
 
 #quote {
@@ -100,15 +121,22 @@ body {
     border-right: double;
     border-radius: 5%;
     padding: 0 2em 0 2em;
-    font-size: 2em;
 }
 
-/* HOME PAGE  HOME PAGE  HOME PAGE  HOME PAGE  HOME PAGE  HOME PAGE   ********************************* */
+#quoteText {
+    font-size: 1.5em;
+}
 
+#quoteSource {
+    font-size: 1em;
+    text-align: right;
+}
+
+/* Main section Home page */
 .section.mainHome {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
     column-gap: 1rem;
     row-gap: .5em;
 }
@@ -120,21 +148,25 @@ body {
     /* justify-content: center; */
 }
 
-.smPost {
+/* .smPost {
     max-height: 40em;
     overflow: hidden;
-}
+} */
 
 .smpTitle {
-    margin: 1em 0 1em 0
+    font-size: 1.5em;
+    margin: 1em 0 .1em 0
 }
 
 .smpPic {
-    width: 100px
+  
+    width: 200px;
+    float: left;
+    padding: 0 .4em .2em 0;
 }
 
 .smpText {
-    margin: 1em 0 1em 0
+    margin: 0 0 1em 0
 }
 
 .mainHome .blogLink {
@@ -145,14 +177,24 @@ body {
 }
 
 .blTitle {
-    Margin: .4em 0 .4em 0
+    font-size: 1.1em;
+    margin: .4em 0 .4em 0
 }
 
-.mainHome .infoLink {
+.blText {
+    font-size: .9em;
+}
+
+.infoLink {
     grid-area: 2 / 2 / 3 / 3;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.ilPic {
+    float: left;
+    margin: 0 .6em .1em 0;
 }
 
 /* CONTINUE READING  CONTINUE READING  CONTINUE READING  CONTINUE READING  CONTINUE READING  CONTINUE READING  */
@@ -223,27 +265,33 @@ body {
     grid-column: 2 / 5;
     display: flex;
     flex-direction: column;
-    align-content: center;
+    align-items: center;
 }
 
 .lmpTitle {
-    text-align:  center;
+    text-align: center;
     color: #1d9c81;
     font-size: 1.7em;
     font-weight: 500;
 }
 
-.lmpPic {
-    position: relative;
-    
+.lmPicHolder {
+    display: flex;
+    justify-content: center;
 }
 
+.lmPic {
+    vertical-align: middle;
+    width: 100%;
+    height: auto;
+}
 
 /* FOOTER  FOOTER  FOOTER  FOOTER  FOOTER  FOOTER  FOOTER  FOOTER  ***/
 
 .section.footer {
     grid-column: 1 / 6;
-    background-color: rgb(182, 161, 131);
+    
+    background-color: #fa9262;
     padding-bottom: 3rem;
     display: grid;
     grid-template-columns: 20% 1fr 1fr 20%;
@@ -258,10 +306,11 @@ body {
 }
 
 #ftHeaderNorm {
-    color: rgb(87, 86, 86);
+    color:  #a54314;
 }
 
 #ftHeaderBold {
+    color: #723726;
     font-weight: bold;
 }
 
