@@ -150,6 +150,7 @@ figCaption {
 }
 
 /* small post section********************************* */
+
 .mainHome .post {
     grid-area: 1 / 1 / 3 / 2;
     display: flex;
@@ -237,19 +238,19 @@ figCaption {
     font-family: 'Coiny', cursive;
     align-self: center;
     margin: 1em;
-    background-color:#5e97d8;
+    background-color: #5e97d8;
     border-radius: 1em;
 }
 
 .btnLearnMore:hover {
-    background-color: #92b4db;;
+    background-color: #92b4db;
+    ;
 }
 
 /* CONTINUE READING  CONTINUE READING  CONTINUE READING  CONTINUE READING  CONTINUE READING  CONTINUE READING  */
 
 .container.contReading {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: .1fr .1fr .1fr 4fr .1fr;
     grid-gap: 1em;
 }
 
@@ -284,16 +285,20 @@ figCaption {
 
 /* BLOG POST PAGE  BLOG POST PAGE  BLOG POST PAGE  BLOG POST PAGE  BLOG POST PAGE   */
 
+.container.blogPost {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1em;
+}
+
 .section.blogPost {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 1fr;
     column-gap: 1rem;
     row-gap: .5em;
 }
 
-.blogPost .blogLink {
-    grid-area: 1 / 1 / 2 / 2;
+.blogLink {
+    grid-row: 1 / 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -315,11 +320,18 @@ figCaption {
 
 /* LEARN MORE  LEARN MORE  LEARN MORE  LEARN MORE  LEARN MORE  LEARN MORE   */
 
-.learnMore {
-    grid-column: 2 / 5;
+.container.learnMore {
+    grid-template-columns: 20% 1fr 20%;
+}
+
+.learnMore .header {
+    grid-column: 2 / 3;
+}
+
+.section.learnMore {
+    grid-column: 2 / 3;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .lmpTitle {
@@ -329,16 +341,7 @@ figCaption {
     font-weight: 500;
 }
 
-.lmPicHolder {
-    display: flex;
-    justify-content: center;
-}
 
-.lmPic {
-    vertical-align: middle;
-    width: 100%;
-    height: auto;
-}
 
 /* FOOTER  FOOTER  FOOTER  FOOTER  FOOTER  FOOTER  FOOTER  FOOTER  ***/
 
