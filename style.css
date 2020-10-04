@@ -229,6 +229,7 @@ figCaption {
 
 .ilPic {
     float: left;
+    width: 120px;
     margin: 0 .6em .1em 0;
 }
 
