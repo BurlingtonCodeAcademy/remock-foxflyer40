@@ -5,11 +5,11 @@ const app = express()
 const port = process.env.PORT || 5000  
 
 
-app.use(express.static(path.resolve('./client/build'))) 
+app.use(express.static(path.resolve('./build'))) 
 
 
 app.get('*', (request, response) =>{
-response.sendFile(path.resolve('./client/build/index.html'))
+response.sendFile(path.resolve('./build/index.html'))
 })  
 
 
