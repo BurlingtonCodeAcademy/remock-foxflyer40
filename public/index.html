@@ -211,20 +211,19 @@
    <!-- Super El-Swanko soundtrack music ********************* -->
    <audio autoplay loop id='ID' src="./media/audio/I Like To Watch.mp3"></audio>
 
-   <!--  enable autoplay -->
-   <script>
 
+   <script>
+      // check for session storage object and if not present (i.e. first page load) present alert to instruct user to click for sound
       if (!sessionStorage.getItem('visited')) {
          alert('click anywhere on page to enable music')
          sessionStorage.setItem('visited', true)
       }
-
+      // enable autoplay
       document.addEventListener('click', musicPlay);
       function musicPlay() {
          document.getElementById('ID').play();
          document.removeEventListener('click', musicPlay);
       }
-
    </script>
 
 </body>
